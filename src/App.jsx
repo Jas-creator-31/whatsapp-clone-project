@@ -1,16 +1,15 @@
 import React from 'react'
 import '/src/App.css'
-import AppShall from './AppShall.jsx'
+import HomePage from './pages/homePage'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
 
   return (
     <>
-      <div>
-        <div className='h-screen w-full'>
-          <AppShall/>
-        </div>
-      </div>
+      <Routes>
+        <Route path='/' element={<HomePage/>} />
+      </Routes>
     </>
   )
 }
