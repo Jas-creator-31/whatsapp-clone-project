@@ -5,7 +5,7 @@ export default function contant() {
         <div>
             <div>
                 <div>
-                    <article className="text-justify">
+                    <article className="text-left text-wrap">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure rerum vitae sed nulla blanditiis eum, recusandae amet, sunt necessitatibus eius perspiciatis delectus earum, fugiat unde fuga. Rem ipsum nemo at!
                         Obcaecati commodi velit quaerat eos, assumenda illo. Fuga enim fugit possimus aliquid? Consequuntur accusantium corporis harum quia. Suscipit, repellendus! Corporis delectus eius, enim provident quo odit reiciendis cumque sit quibusdam?
                         Minus sit, esse quisquam qui porro accusantium facilis quo, obcaecati eaque officia harum, officiis deleniti vero blanditiis. Deserunt, at a fugit dolorum harum asperiores eveniet, perferendis nisi, aut nemo exercitationem.
