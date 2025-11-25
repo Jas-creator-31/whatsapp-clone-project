@@ -14,7 +14,7 @@ function App() {
             <Sidebar />
             <Navbar />
           </div>
-          <div className='pl-32 pt-16 pr-10'>
+          <div className='pl-3 pb-14 pr7 sm:pl-32 pt-16 sm:pr-10'>
             <div className=''>
               <Contant />
             </div>
