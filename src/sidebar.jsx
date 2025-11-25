@@ -12,12 +12,9 @@ export default function Sidebar() {
         } else if (btn.textContent === "ligth") {
             document.body.style.backgroundColor = "#eeeeee";
             btn.textContent = "dark";
-        }
-        
-        
-        
+        }   
     }
-
+    
     return (
         <div>
             <button id="menu" className="flex sm:hidden bg-gray-950 p-1 absolute top-0 left-0 z-50 h-12 hover:bg-gray-900 w-max text-gray-50 text-center justify-center align-middle"><p className="text-center p-2 ">menu</p></button>
