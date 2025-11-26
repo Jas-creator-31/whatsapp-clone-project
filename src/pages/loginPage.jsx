@@ -1,6 +1,8 @@
 import React from "react";
 import smImage from "../assets/pexels-andrew-3178786.jpg";
 
+
+
 export default function LoginPage() {
     return (
         <div className="font-sans">
