@@ -12,6 +12,8 @@ export default function LoginPage() {
     const hadleError = () => {
         event.preventDefault()
 
+        
+
         setEmailEarrorText('Please enter a email address');
 
 
