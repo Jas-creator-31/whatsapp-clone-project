@@ -1,27 +1,43 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 
 
 export default function LoginPage() {
 
-    const password = useRef(null);
-
+    const [emailValue, setEmailValue] = useState('')
     const [emailEarrorText, setEmailEarrorText] = useState('');
     const [passwordEarrorText, setPasswordEarrorText] = useState('');
-    // const [confirmePassword, setConfirmePassword] = useState("");
+    const [password, setPassword] = useState('');
 
-    const hadleError = () => {
+    const [confirmePasswordEarrorText, setConfirmePasswordEarrorText] = useState('')
+    const [confirmePassword, setConfirmePassword] = useState('');
+
+    const hadleEmailEarror = () => {
+        if (emailValue === ''){
+            setEmailEarrorText('email is requed');
+        }
+    }
+
+    const hadlePasswodeEarror = () => {
+        if (password === '') {
+            setPasswordEarrorText("password is requed")
+        } else if (password.length < 6) {
+            setPasswordEarrorText("Password is too short")
+        }
+    }
+
+    const hadleConfirmePassword = () => {
+        if (confirmePassword === '') {
+            setConfirmePasswordEarrorText("Confirme Password is requed")
+        } else if (confirmePassword !== password) {
+            setConfirmePasswordEarrorText("Password don't macth")
+        }
+    }
+
+    const hadleForm = () => {
         event.preventDefault();
-        if (emailEarrorText !== ''){
-            setEmailEarrorText('email is requed');
-        } else {
-            setEmailEarrorText('email is requed');
-        }
-
-        if (password.current.value > 6) {
-            setPasswordEarrorText("password is too shot")
-        }
-
-
+        hadleEmailEarror()
+        hadlePasswodeEarror()
+        hadleConfirmePassword()
     }
 
     return (
@@ -35,12 +51,12 @@ export default function LoginPage() {
                             <h1 className="flex flex-col justify-end-safe h-full font-extrabold text-4xl text-gray-800">Welcome back</h1>
                         </div>
                         <div className="relative h-70 w-max flex flex-col p-2.5 top-16 justify-around self-center">
-                            <form onSubmit={hadleError}>
+                            <form onSubmit={hadleForm}>
                                 <div className="flex flex-col justify-center align-middle items-center mt-2">
 
                                     <div className="h-max w-full flex flex-col justify-center items-center">
                                         <p className="text-left w-59">Email Address</p>
-                                        <input className="w-60 h-10 rounded-2xl bg-sky-100 p-1 focus:outline-2 focus:outline-blue-500" type="email" placeholder="Enter your email"/>
+                                        <input className="w-60 h-10 rounded-2xl bg-sky-100 p-1 focus:outline-2 focus:outline-blue-500" type="email" placeholder="Enter your email" onChange={(e) => setEmailValue(e.target.value)}/>
                                         <p className="text-left w-59 text-red-600 h-3 errorText">{emailEarrorText}</p>
                                     </div>
 
@@ -49,7 +65,7 @@ export default function LoginPage() {
                                 <div className="flex flex-col justify-center align-middle mt-2">
                                     <div className="h-max w-full flex flex-col justify-center">
                                         <p className="text-left w-59">Password</p>
-                                        <input className="w-60 h-10 rounded-2xl bg-sky-100 p-1 flex flex-row justify-self-center focus:outline-2 focus:outline-blue-500" type="password" placeholder="Password" ref={password}/>
+                                        <input className="w-60 h-10 rounded-2xl bg-sky-100 p-1 flex flex-row justify-self-center focus:outline-2 focus:outline-blue-500" type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)}/>
                                         <p className="text-left w-59 text-red-600 h-3 errorText">{passwordEarrorText}</p>
                                     </div>
                                 </div>
@@ -57,8 +73,8 @@ export default function LoginPage() {
                                 <div className="flex flex-col justify-center align-middle mt-2">
                                     <div className="h-max w-full flex flex-col justify-center items-center">
                                         <p className="text-left w-59">Confirme Password</p>
-                                        <input className="w-60 h-10 rounded-2xl bg-sky-100 p-1 flex flex-row justify-self-center focus:outline-2 focus:outline-blue-500" type="password" id="passwordConfirme" placeholder="Confirme password" />
-                                        <p className="text-left w-59 text-red-600 h-3 errorText"></p>
+                                        <input className="w-60 h-10 rounded-2xl bg-sky-100 p-1 flex flex-row justify-self-center focus:outline-2 focus:outline-blue-500" type="password" id="passwordConfirme" placeholder="Confirme password" onChange={(e) => setConfirmePassword(e.target.value)}/>
+                                        <p className="text-left w-59 text-red-600 h-3 errorText">{confirmePasswordEarrorText}</p>
                                     </div>
 
                                 </div>
