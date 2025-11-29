@@ -1,20 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 
 export default function LoginPage() {
 
-    const [emailEarrorText, setEmailEarrorText] = useState('');
+    const password = useRef(null);
 
-    // const email = useState(false);
-    // const [password, setPassword] = useState("");
+    const [emailEarrorText, setEmailEarrorText] = useState('');
+    const [passwordEarrorText, setPasswordEarrorText] = useState('');
     // const [confirmePassword, setConfirmePassword] = useState("");
 
     const hadleError = () => {
-        event.preventDefault()
+        event.preventDefault();
+        if (emailEarrorText !== ''){
+            setEmailEarrorText('email is requed');
+        } else {
+            setEmailEarrorText('email is requed');
+        }
 
-        
-
-        setEmailEarrorText('Please enter a email address');
+        if (password.current.value > 6) {
+            setPasswordEarrorText("password is too shot")
+        }
 
 
     }
@@ -35,7 +40,7 @@ export default function LoginPage() {
 
                                     <div className="h-max w-full flex flex-col justify-center items-center">
                                         <p className="text-left w-59">Email Address</p>
-                                        <input className="w-60 h-10 rounded-2xl bg-sky-100 p-1 focus:outline-2 focus:outline-blue-500" type="email" id="emailInput" placeholder="Enter your email" />
+                                        <input className="w-60 h-10 rounded-2xl bg-sky-100 p-1 focus:outline-2 focus:outline-blue-500" type="email" placeholder="Enter your email"/>
                                         <p className="text-left w-59 text-red-600 h-3 errorText">{emailEarrorText}</p>
                                     </div>
 
@@ -44,8 +49,8 @@ export default function LoginPage() {
                                 <div className="flex flex-col justify-center align-middle mt-2">
                                     <div className="h-max w-full flex flex-col justify-center">
                                         <p className="text-left w-59">Password</p>
-                                        <input className="w-60 h-10 rounded-2xl bg-sky-100 p-1 flex flex-row justify-self-center focus:outline-2 focus:outline-blue-500" type="password" id="password" placeholder="Password" />
-                                        <p className="text-left w-59 text-red-600 h-3 errorText"></p>
+                                        <input className="w-60 h-10 rounded-2xl bg-sky-100 p-1 flex flex-row justify-self-center focus:outline-2 focus:outline-blue-500" type="password" placeholder="Password" ref={password}/>
+                                        <p className="text-left w-59 text-red-600 h-3 errorText">{passwordEarrorText}</p>
                                     </div>
                                 </div>
 
