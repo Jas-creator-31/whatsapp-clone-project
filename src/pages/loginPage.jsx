@@ -83,7 +83,7 @@ export default function LoginPage() {
                             </form>
                             <div className="flex flex-row justify-center mt-5">
                                 <p>Don't have a account?</p>
-                                <a href="" className="ml-3 text-amber-200 hover:-translate-y-1 contrast-100 hover:underline">Sign up</a>
+                                <a href="/" className="ml-3 text-amber-200 hover:-translate-y-1 contrast-100 hover:underline">Sign up</a>
                             </div>
 
                         </div>
