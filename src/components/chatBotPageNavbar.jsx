@@ -3,9 +3,9 @@ import React from "react";
 
 export default function ChatBotPageNavbar() {
     return (
-        <div className="relative w-lvw h-auto z-10">
-            <div className="flex flex-row justify-between w-full bg-gray-950 p-2.5 align-middle">
-                <h1 className="text-gray-100 items-center w-max">Logo</h1>
+        <div className="relative w-lvw h-auto z-10 border-b-2">
+            <div className="flex flex-row justify-between w-full bg-transparent p-2.5 align-middle">
+                <h1 className="text-gray-100 items-center w-max bg-transparent border">Logo</h1>
                 <div className="hidden shadow-gray-100 text-gray-100 sm:flex flex-row w-60 justify-between items-center">
                     <a className="hover:-translate-y-0.5 cursor-pointer" href="/">Home</a>
                     <a className="hover:-translate-y-0.5 cursor-pointer" href="/login">Login</a>
