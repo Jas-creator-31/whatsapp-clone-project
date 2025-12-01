@@ -5,9 +5,11 @@ export default {
   theme: {
     extend: {
         colors: {
-            'custom-blue': '#1DA1F2',
-            'custom-dark': '#15202B',
-            'custom-light': '#FFFFFF',
+            'whatsapp-teal-green': '#075e54',
+            'whatsapp-surfie-green': '#128c7e',
+            'whatsapp-ligth-green': '#25d366',
+            'whatsapp-tea-green': '#dcf8c6',
+            'whatsapp-whiteChocolate-green': '#ece5dd',
         },
     },
   },

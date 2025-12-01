@@ -5,9 +5,9 @@ export default function WhatsappMokeupPage() {
 
 
     return (
-        <div>
+        <div className="h-screen w-screen">
             <div>
-                <div>
+                <div className="">
                     <div></div>
                     <div></div>
                     <div></div>
