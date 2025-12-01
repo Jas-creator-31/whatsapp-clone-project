@@ -5,11 +5,14 @@ export default {
   theme: {
     extend: {
         colors: {
-            'whatsapp-teal-green': '#075e54',
-            'whatsapp-surfie-green': '#128c7e',
-            'whatsapp-ligth-green': '#25d366',
-            'whatsapp-tea-green': '#dcf8c6',
-            'whatsapp-whiteChocolate-green': '#ece5dd',
+            'whatsapp-primary': '#075e54',
+            'whatsapp-accent': '#25d366',
+            'whatsapp-bubble-outgoing': '#dcf8c6',
+            'whatsapp-bg-main': '#ece5dd',
+            'whatsapp-teal-medium': '#128c7e',
+            'whatsapp-blue-link': '#34b7f1',
+            'whatsapp-white': '#ffffff',
+            'whatsapp-gray-100': '#f3f4f6', 
         },
     },
   },
