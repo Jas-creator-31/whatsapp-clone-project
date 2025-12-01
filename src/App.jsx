@@ -1,5 +1,5 @@
 import React from 'react'
-import '/src/App.css'
+import './App.css'
 import HomePage from './pages/homePage'
 import LoginPage from './pages/loginPage'
 import ChatBotPage from './pages/chatBotPage'
