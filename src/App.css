@@ -1,2 +1,13 @@
 /* src/App.css */
 @import "tailwindcss";
+
+@theme {
+    --color-whatsapp-primary: #075e54;
+    --color-whatsapp-accent: #25d366;
+    --color-whatsapp-bubble-outgoing: #dcf8c6;
+    --color-whatsapp-bg-main: #ece5dd;
+    --color-whatsapp-teal-medium: #128c7e;
+    --color-whatsapp-blue-link: #34b7f1;
+    --color-whatsapp-white: #ffffff;
+    --color-whatsapp-gray-100: #f3f4f6;
+}
